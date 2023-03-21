@@ -1,0 +1,42 @@
+version: "3"
+services:
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "80:80"
+    volumes:
+      - ./api-gateway/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - auth-service
+      - postgres
+    networks:
+      - backend-network
+
+  auth-service:
+    build: ./auth-service
+    depends_on:
+      - postgres
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./auth-service:/usr/src/app
+      - /usr/src/app/node_modules
+    env_file:
+      - ./auth-service/.env.dev
+    networks:
+      - backend-network
+
+  postgres:
+    image: postgres:15.2-alpine3.17
+    restart: always
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    networks:
+      - backend-network
+
+networks:
+  backend-network:
