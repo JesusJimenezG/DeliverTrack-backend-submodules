@@ -1,6 +1,6 @@
 [submodule "api-gateway"]
 	path = api-gateway
-	url = ./api-gateway
+	url = https://github.com/JesusJimenezG/pern-backend-api-gateway.git
 [submodule "auth-service"]
 	path = auth-service
-	url = ./auth-service
+	url = https://github.com/JesusJimenezG/pern-backend-auth-service.git
