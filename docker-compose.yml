@@ -22,7 +22,7 @@ services:
       - ./auth-service:/usr/src/app
       - /usr/src/app/node_modules
     env_file:
-      - ./auth-service/.env.dev
+      - ./auth-service/.env
     networks:
       - backend-network
 
