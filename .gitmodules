@@ -7,3 +7,6 @@
 [submodule "live-tracking-service"]
 	path = live-tracking-service
 	url = https://github.com/JesusJimenezG/pern-backend-bot-live-tracking-service.git
+[submodule "session-authentication-middleware"]
+	path = session-authentication-middleware
+	url = https://github.com/JesusJimenezG/pern-backend-session-middleware-module.git
