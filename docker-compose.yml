@@ -23,7 +23,8 @@ services:
     volumes:
       - ./auth-service:/usr/src/app
       - /usr/src/app/node_modules
-      - ./session-authentication-middleware:/usr/src/session-authentication-middleware
+      # This volume is for working with the development session-authentication-middleware instead of the packed one
+      # - ./session-authentication-middleware:/usr/src/session-authentication-middleware
     env_file:
       - ./auth-service/.env
     networks:
@@ -38,7 +39,8 @@ services:
     volumes:
       - ./live-tracking-service:/usr/src/app
       - /usr/src/app/node_modules
-      - ./session-authentication-middleware:/usr/src/session-authentication-middleware
+      # This volume is for working with the development session-authentication-middleware instead of the packed one
+      # - ./session-authentication-middleware:/usr/src/session-authentication-middleware
     env_file:
       - ./live-tracking-service/.env
     networks:
