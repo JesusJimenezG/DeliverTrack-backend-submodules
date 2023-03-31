@@ -10,3 +10,6 @@
 [submodule "shared-modules"]
 	path = shared-modules
 	url = https://github.com/JesusJimenezG/DeliverTrack-shared-modules.git
+[submodule "orders-service"]
+	path = orders-service
+	url = https://github.com/JesusJimenezG/DeliverTrack-orders-service.git
