@@ -1,12 +1,15 @@
 [submodule "api-gateway"]
 	path = api-gateway
-	url = https://github.com/JesusJimenezG/pern-backend-api-gateway.git
+	url = https://github.com/JesusJimenezG/DeliverTrack-api-gateway.git
 [submodule "auth-service"]
 	path = auth-service
-	url = https://github.com/JesusJimenezG/pern-backend-auth-service.git
+	url = https://github.com/JesusJimenezG/DeliverTrack-auth-service.git
 [submodule "live-tracking-service"]
 	path = live-tracking-service
-	url = https://github.com/JesusJimenezG/pern-backend-bot-live-tracking-service.git
-[submodule "session-authentication-middleware"]
-	path = session-authentication-middleware
-	url = https://github.com/JesusJimenezG/pern-backend-session-middleware-module.git
+	url = https://github.com/JesusJimenezG/DeliverTrack-live-tracking-service.git
+[submodule "order-management-service"]
+	path = order-management-service
+	url = ./order-management-service
+[submodule "shared-modules"]
+	path = shared-modules
+	url = https://github.com/JesusJimenezG/DeliverTrack-shared-modules.git
